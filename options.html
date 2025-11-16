@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dance Skip Keys – Options</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; max-width: 720px; }
+    label { display: block; margin: 12px 0 4px; }
+    input[type="number"] { width: 120px; padding: 6px; }
+    select { padding: 6px; }
+    .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-top: 16px; }
+    .muted { color: #666; font-size: 0.95em; }
+    button { padding: 8px 14px; border-radius: 8px; border: 1px solid #ccc; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Dance Skip Keys – Options</h1>
+  <p class="muted">Configure your step sizes and the modifier for fine nudges.</p>
+
+  <div class="card">
+    <div class="row">
+      <label for="stepSeconds"><strong>Normal step (Left/Right):</strong></label>
+      <input id="stepSeconds" type="number" step="0.1" min="0.1" value="1.0"> <span>seconds</span>
+    </div>
+
+    <div class="row">
+      <label for="fineStepSeconds"><strong>Fine step (with modifier):</strong></label>
+      <input id="fineStepSeconds" type="number" step="0.1" min="0.1" value="0.5"> <span>seconds</span>
+    </div>
+
+    <div class="row">
+      <label for="fineModifier"><strong>Fine modifier key:</strong></label>
+      <select id="fineModifier">
+        <option>Alt</option>
+        <option>Shift</option>
+        <option>Ctrl</option>
+        <option>Meta</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="enableOnInputs"><strong>Enable inside inputs/textareas:</strong></label>
+      <input id="enableOnInputs" type="checkbox">
+    </div>
+
+    <div class="row" style="margin-top:12px;">
+      <button id="saveBtn">Save</button>
+      <span id="status" class="muted"></span>
+    </div>
+  </div>
+
+  <p class="muted" style="margin-top:24px;">Shortcuts:
+    <br>• <kbd>Left</kbd>/<kbd>Right</kbd> = normal step
+    <br>• <kbd><span id="modLabel">Alt</span> + Left/Right</kbd> = fine step
+  </p>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#4285f4" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Play button triangle -->
+  <polygon points="50,40 50,88 90,64" fill="white"/>
+  
+  <!-- Arrow keys representation -->
+  <g transform="translate(20, 100)">
+    <!-- Left arrow -->
+    <path d="M8,8 L2,14 L8,20 M2,14 L16,14" stroke="white" stroke-width="2" fill="none"/>
+    
+    <!-- Right arrow -->
+    <path d="M32,8 L38,14 L32,20 M38,14 L24,14" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Small "1s" text -->
+  <text x="64" y="110" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1s</text>
+</svg>

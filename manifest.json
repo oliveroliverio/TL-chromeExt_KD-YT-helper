@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Dance Skip Keys",
+  "version": "1.0.0",
+  "description": "Use arrow keys to nudge video: ±1.0s (Left/Right) and ±0.5s with Alt.",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}
